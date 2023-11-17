@@ -10,22 +10,22 @@
     <link rel="icon" href="<?=SITE_TEMPLATE_PATH?>/img/favicon.ico">
     <?
     $Asset = \Bitrix\Main\Page\Asset::getInstance();
-    $Asset->addString('<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">');
-    $Asset->addString('<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">');
-    $Asset->addString('<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">');
+    $Asset->addCss("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+    $Asset->addCss("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+    $Asset->addCss("https://unpkg.com/swiper/swiper-bundle.min.css");
 
     $Asset->addCss(SITE_TEMPLATE_PATH . "/css/datepicker.css");
     $Asset->addCss(SITE_TEMPLATE_PATH . "/css/nouislider.css");
     $Asset->addCss(SITE_TEMPLATE_PATH . "/template_styles.css");
 
+    $Asset->addJs("https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js");
+    $Asset->addJs("https://unpkg.com/swiper/swiper-bundle.min.js");
     $Asset->addJs(SITE_TEMPLATE_PATH . "/js/plagins/datepicker.js");
     $Asset->addJs(SITE_TEMPLATE_PATH . "/js/plagins/jquery.mask.min.js");
     $Asset->addJs(SITE_TEMPLATE_PATH . "/js/plagins/nouislider.js");
     $Asset->addJs(SITE_TEMPLATE_PATH . "/js/plagins/wNumb.min.js");
     $Asset->addJs(SITE_TEMPLATE_PATH . "/js/main.js");
 
-    $Asset->addString('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>');
-    $Asset->addString('<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>');
     ?>
     <title><?=$APPLICATION->ShowTitle();?></title>
     <?=$APPLICATION->ShowHead();?>

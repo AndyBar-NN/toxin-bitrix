@@ -1,59 +1,61 @@
 'use strict'
-// calendar
-var date = new Date();
-date.setDate(date.getDate() + 1);
-var endDate = new Date(date.getTime() + 365 * 24 * 60 * 60 * 1000);
-var startElem = $('#start'),
-    endElem = $('#end');
+$(document).ready(function () {
+    // calendar
+    var date = new Date();
+    date.setDate(date.getDate() + 1);
+    var endDate = new Date(date.getTime() + 365 * 24 * 60 * 60 * 1000);
 
-startElem.datepicker({
-    minDate: date,
-    maxDate: endDate,
-    onSelect: function (fd, date) {
-        startElem.val(fd.split('-')[0]);
-        endElem.val(fd.split('-')[1]);
-    }
-});
-endElem.click(function() {
-    if (!$('.datepicker').hasClass('active')) {
-        $('.datepicker').addClass('active');
-        $('.datepicker').css({'left': '403px', 'top': '341.1px'});
-    }
-});
+    var startElem = $('#start'),
+        endElem = $('#end');
 
-$(document).click(function(e) {
-    if ($(e.target).closest(".datepickers") ||
-        $(e.target).closest(".datepicker")) {
-        return;
-    } else {
-        $('.datepicker').removeClass('active');
-    }
-});
-
-$('#getRooms').click(function() {
-    // создадим пустой объект
-    var $data = {};
-// переберём все элементы input, textarea и select формы с id="myForm "
-    $('.table__form').find ('input').each(function() {
-        // добавим новое свойство к объекту $data
-        // имя свойства – значение атрибута name элемента
-        // значение свойства – значение свойство value элемента
-        $data[this.name] = $(this).val().trim();
-        console.log($data[this.name])
+    startElem.datepicker({
+         minDate: date,
+         maxDate: endDate,
+         onSelect: function (fd) {
+             startElem.val(fd.split('-')[0]);
+             endElem.val(fd.split('-')[1]);
+         }
     });
-});
+    endElem.click(function () {
+        if (!$('.datepicker').hasClass('active')) {
+            $('.datepicker').addClass('active');
+            $('.datepicker').css({'left': '403px', 'top': '341.1px'});
+        }
+    });
 
-// swiper-slide
-const swiper = new Swiper('.swiper-container', {
-    allowTouchMove: false,
-    speed: 5000,
-    autoplay: {
-        delay: 15000,
-    },
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
+    $('#getRooms').click(function () {
+        // создадим пустой объект
+        var $data = {};
+        // переберём все элементы input, textarea и select формы с id="myForm "
+        $('.table__form').find('input').each(function () {
+            // добавим новое свойство к объекту $data
+            // имя свойства – значение атрибута name элемента
+            // значение свойства – значение свойство value элемента
+            $data[this.name] = $(this).val().trim();
+            console.log($data[this.name])
+        });
+    });
+    $(document).click(function (e) {
+        if ($(e.target).closest(".datepickers").length ||
+            $(e.target).closest(".datepicker").length) {
+            return;
+        } else {
+            $('.datepicker').removeClass('active');
+        }
+    });
+
+    // swiper-slide
+    const swiper = new Swiper('.swiper-container', {
+        allowTouchMove: false,
+        speed: 5000,
+        autoplay: {
+            delay: 15000,
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+    });
 });
 
 // dropdown guest
@@ -151,7 +153,6 @@ clearBtn.addEventListener('click', (e) => {
 });
 
 // room
-'use strict'
 const tableForm = document.querySelector('.table__form'),
     getIndex = document.querySelector('#getIndex'),
     inputStart = document.querySelector('#start'),
@@ -182,6 +183,7 @@ function createNumber() {
   `;
         roomBg.insertAdjacentHTML('afterbegin', background);
     }
+
     function createForm() {
         const data = `
     <div class="room__data--number">
@@ -196,6 +198,7 @@ function createNumber() {
   `;
         roomFees.insertAdjacentHTML('afterbegin', data);
     }
+
     createBackground();
     createForm();
 }
@@ -209,7 +212,6 @@ getIndex.addEventListener('click', (e) => {
 createNumber();
 
 // rooms
-'use strict'
 // noUiSlider
 var nonLinearStepSlider = document.getElementById('slider-non-linear-step');
 noUiSlider.create(nonLinearStepSlider, {
@@ -255,7 +257,7 @@ function itemBed() {
 }
 
 //
-const getData = async function(url) {
+const getData = async function (url) {
     const response = await fetch(url); // запрос
 
     if (!response.ok) {
@@ -266,7 +268,7 @@ const getData = async function(url) {
 };
 
 function createRooms(item) {
-    const { image, number, luks, price, star, feedback, room } = item;
+    const {image, number, luks, price, star, feedback, room} = item;
 
     const num = `
     <a class="room" data-number="${room}">

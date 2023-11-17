@@ -641,48 +641,41 @@ button {
     margin-left: 0;
 }
 
-.hero__slide-1 {
-    background: url(img/image.jpg) no-repeat center;
+.hero__slide {
     position: relative;
     max-width: 1440px;
     height: 100%;
     margin: auto;
     border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.hero__slide-1 {
+    background: url(img/image.jpg) no-repeat center;
 }
 
 .hero__slide-2 {
     background: url(img/image_2.jpg) no-repeat center;
-    position: relative;
-    max-width: 1440px;
-    height: 100%;
-    margin: auto;
-    border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .hero__slide-3 {
     background: url(img/image_3.jpg) no-repeat center;
-    position: relative;
-    max-width: 1440px;
-    height: 100%;
-    margin: auto;
-    border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .background {
     height: 833px;
 }
 
-.background__text {
+/*.background__text {
     position: absolute;
     max-width: 297px;
     right: 19.1%;
     bottom: 1.15%;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 14px;
     line-height: 24px;
     text-align: right;
     color: rgba(31, 32, 65, 0.75);
-}
+}*/
 
 .table {
     position: absolute;
@@ -708,6 +701,10 @@ button {
     border: 1px solid rgba(0, 0, 0, 0.12);
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+}
+
+.table__form input {
+    cursor: pointer;
 }
 
 .table__data {

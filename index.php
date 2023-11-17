@@ -4,18 +4,15 @@
         <div class="background swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="hero__slide-1">
-                        <p class="background__text">Лучшие номера для вашей работы, отдыха и просто вдохновения</p>
+                    <div class="hero__slide hero__slide-1">
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="hero__slide-2">
-                        <p class="background__text">Лучшие номера для вашей работы, отдыха и просто вдохновения</p>
+                    <div class="hero__slide hero__slide-2">
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="hero__slide-3">
-                        <p class="background__text">Лучшие номера для вашей работы, отдыха и просто вдохновения</p>
+                    <div class="hero__slide hero__slide-3">
                     </div>
                 </div>
             </div>
