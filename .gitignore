@@ -25,6 +25,7 @@
 
 # исключаем загружаемые файлы
 /upload/
+/.idea/
 
 Nginx_*
 Nginx-*
@@ -40,7 +41,6 @@ Thumbs.db
 ehthumbs.db
 
 # исключаем все текстовые и подобные ресурсы
-/.idea/
 *.xml
 *.html
 *.txt
