@@ -40,7 +40,7 @@ Thumbs.db
 ehthumbs.db
 
 # исключаем все текстовые и подобные ресурсы
-/.idea*
+/.idea/
 *.xml
 *.html
 *.txt
