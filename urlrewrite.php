@@ -8,6 +8,14 @@ $arUrlRewrite=array (
     'PATH' => '/desktop_app/router.php',
     'SORT' => 100,
   ),
+  10 => 
+  array (
+    'CONDITION' => '#^/rooms/filter/([a-z0-9_\\-\\/]+)/apply/#',
+    'RULE' => 'SMART_FILTER_PATH=$1&',
+    'ID' => '',
+    'PATH' => '/rooms/index.php',
+    'SORT' => 100,
+  ),
   1 => 
   array (
     'CONDITION' => '#^/video([\\.\\-0-9a-zA-Z]+)(/?)([^/]*)#',
@@ -54,6 +62,14 @@ $arUrlRewrite=array (
     'RULE' => '',
     'ID' => 'bitrix:photogallery',
     'PATH' => '/photo.php',
+    'SORT' => 100,
+  ),
+  11 => 
+  array (
+    'CONDITION' => '#^/rooms/#',
+    'RULE' => '',
+    'ID' => 'bitrix:catalog',
+    'PATH' => '/rooms/index.php',
     'SORT' => 100,
   ),
   5 => 

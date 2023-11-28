@@ -1023,7 +1023,7 @@ button {
 
 .container__sidebar {
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 }
 
 .sidebar {
@@ -1136,6 +1136,7 @@ button {
 }
 
 .rooms {
+    width: 100%;
     margin-left: 60px;
     margin-top: 10px;
 }

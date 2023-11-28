@@ -1,7 +1,9 @@
 <?
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Комнаты");
-?><?$APPLICATION->IncludeComponent(
+?>
+    <div class="container">
+        <? $APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
 	"rooms", 
 	array(
@@ -33,7 +35,7 @@ $APPLICATION->SetTitle("Комнаты");
 		"USER_CONSENT_ID" => "0",
 		"USER_CONSENT_IS_CHECKED" => "Y",
 		"USER_CONSENT_IS_LOADED" => "N",
-		"SEF_MODE" => "N",
+		"SEF_MODE" => "Y",
 		"SEF_FOLDER" => "/rooms/",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_JUMP" => "N",
@@ -62,13 +64,13 @@ $APPLICATION->SetTitle("Комнаты");
 		"PRICE_CODE" => array(
 			0 => "1",
 		),
-		"USE_PRICE_COUNT" => "N",
+		"USE_PRICE_COUNT" => "Y",
 		"SHOW_PRICE_COUNT" => "1",
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRICE_VAT_SHOW_VALUE" => "N",
 		"CONVERT_CURRENCY" => "N",
 		"BASKET_URL" => "/personal/basket.php",
-		"USE_PRODUCT_QUANTITY" => "N",
+		"USE_PRODUCT_QUANTITY" => "Y",
 		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
 		"ADD_PROPERTIES_TO_BASKET" => "Y",
 		"PRODUCT_PROPS_VARIABLE" => "prop",
@@ -90,7 +92,7 @@ $APPLICATION->SetTitle("Комнаты");
 		"SEARCH_CHECK_DATES" => "Y",
 		"SEARCH_USE_SEARCH_RESULT_ORDER" => "N",
 		"SHOW_TOP_ELEMENTS" => "Y",
-		"TOP_ELEMENT_COUNT" => "9",
+		"TOP_ELEMENT_COUNT" => "15",
 		"TOP_LINE_ELEMENT_COUNT" => "3",
 		"TOP_ELEMENT_SORT_FIELD" => "sort",
 		"TOP_ELEMENT_SORT_ORDER" => "asc",
@@ -98,7 +100,7 @@ $APPLICATION->SetTitle("Комнаты");
 		"TOP_ELEMENT_SORT_ORDER2" => "desc",
 		"TOP_VIEW_MODE" => "SECTION",
 		"TOP_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
-		"TOP_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
+		"TOP_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
 		"TOP_ENLARGE_PRODUCT" => "STRICT",
 		"TOP_SHOW_SLIDER" => "Y",
 		"TOP_SLIDER_INTERVAL" => "3000",
@@ -199,10 +201,20 @@ $APPLICATION->SetTitle("Комнаты");
 		"USE_ELEMENT_COUNTER" => "Y",
 		"DISABLE_INIT_JS_IN_COMPONENT" => "N",
 		"DETAIL_SET_VIEWED_IN_COMPONENT" => "N",
+		"SEF_URL_TEMPLATES" => array(
+			"sections" => "",
+			"section" => "",
+			"element" => "#ELEMENT_ID#/",
+			"compare" => "compare.php?action=#ACTION_CODE#",
+			"smart_filter" => "/rooms/filter/#SMART_FILTER_PATH#/apply/",
+		),
 		"VARIABLE_ALIASES" => array(
-			"ELEMENT_ID" => "ELEMENT_ID",
-			"SECTION_ID" => "SECTION_ID",
+			"compare" => array(
+				"ACTION_CODE" => "action",
+			),
 		)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+); ?>
+    </div>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
