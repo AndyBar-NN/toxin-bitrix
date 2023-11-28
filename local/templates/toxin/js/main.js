@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     var startElem = $('#start'),
         endElem = $('#end');
-
+    
     startElem.datepicker({
          minDate: date,
          maxDate: endDate,
@@ -32,17 +32,15 @@ $(document).ready(function () {
             // имя свойства – значение атрибута name элемента
             // значение свойства – значение свойство value элемента
             $data[this.name] = $(this).val().trim();
-            console.log($data[this.name])
         });
     });
-    $(document).click(function (e) {
-        if ($(e.target).closest(".datepickers").length ||
-            $(e.target).closest(".datepicker").length) {
-            return;
-        } else {
+    /*$(document).click(function (e) {
+        if (!$(".datepickers").is(e.target) ||
+            ($('.datepicker').is(e.target) &&
+            $('.datepicker').has(e.target).length == 0)) {
             $('.datepicker').removeClass('active');
         }
-    });
+    });*/
 
     // swiper-slide
     const swiper = new Swiper('.swiper-container', {
