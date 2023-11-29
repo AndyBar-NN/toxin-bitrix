@@ -65,6 +65,7 @@ $containerName = 'catalog-top-container';
 ?>
 
 <div class="rooms">
+    <div class="rooms__elem">
 	<?
 	if (!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS']))
 	{
@@ -134,7 +135,6 @@ $containerName = 'catalog-top-container';
 			$rowItems = array_splice($arResult['ITEMS'], 0, $rowData['COUNT']);
 			?>
 
-                <div class="rooms__elem">
 				<?
 				switch ($rowData['VARIANT'])
 				{
@@ -163,7 +163,7 @@ $containerName = 'catalog-top-container';
                     break;
 				}
 				?>
-                </div>
+
 			<?
 		}
 		unset($rowItems);
@@ -192,6 +192,7 @@ $containerName = 'catalog-top-container';
 	$signedTemplate = $signer->sign($templateName, 'catalog.top');
 	$signedParams = $signer->sign(base64_encode(serialize($arResult['ORIGINAL_PARAMETERS'])), 'catalog.top');
 	?>
+    </div>
 </div>
 <script>
 	BX.message({
