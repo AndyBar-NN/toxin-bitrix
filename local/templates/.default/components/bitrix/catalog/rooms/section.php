@@ -70,7 +70,7 @@ if ($isFilter)
 		$arCurSection = array();
 }
 ?>
-<div class="row">
+<div class="container__sidebar">
 <?
 if ($isVerticalFilter)
 {

@@ -48,9 +48,9 @@ $APPLICATION->IncludeComponent(
 	($arParams["SHOW_TOP_ELEMENTS"] !== "N" ? array("HIDE_ICONS" => "Y") : array())
 );
 unset($sectionListParams);
-*/?><!--
+?>
 
---><?/*if ($arParams["USE_COMPARE"] === "Y")
+<?if ($arParams["USE_COMPARE"] === "Y")
 {
 	$APPLICATION->IncludeComponent(
 		"bitrix:catalog.compare.list",
@@ -84,7 +84,7 @@ if ($arParams["SHOW_TOP_ELEMENTS"] !== "N")
 
 	$APPLICATION->IncludeComponent(
 		"bitrix:catalog.top",
-		"rooms",
+		"",
 		array(
 			"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 			"IBLOCK_ID" => $arParams["IBLOCK_ID"],

@@ -132,10 +132,10 @@ if ($showTopPager)
 
 if (!isset($arParams['HIDE_SECTION_DESCRIPTION']) || $arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
 {
-	?>
+	?><?/*
 	<div class="bx-section-desc bx-<?=$arParams['TEMPLATE_THEME']?>">
 		<p class="bx-section-desc-post"><?=$arResult['DESCRIPTION'] ?? ''?></p>
-	</div>
+	</div>*/?>
 	<?
 }
 ?>
