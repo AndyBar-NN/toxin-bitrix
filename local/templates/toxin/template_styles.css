@@ -71,7 +71,9 @@ pre {
 a {
     background-color: transparent;
 }
-
+a:hover {
+    color: #BC9CFF;
+}
 /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
@@ -337,8 +339,8 @@ template {
     display: none;
 }
 
-.container {
-    width: 85%;
+.container_main {
+    width: 95%;
     max-width: 1160px;
     margin: auto;
 }
@@ -633,8 +635,18 @@ button {
     color: #FFFFFF;
 }
 
+.button__reg:hover {
+    background: #FFFFFF;
+    color: #BC9CFF;
+}
+
 .button__login {
     margin-left: 0;
+}
+
+.button__login:hover {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: #FFFFFF;
 }
 
 .hero__slide {
@@ -1143,7 +1155,6 @@ button {
 
 .rooms__elem {
     width: 100%;
-    max-width: 834px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -1160,12 +1171,12 @@ button {
 
 .room {
     width: 270px;
-    height: 257.5px;
+    /*height: 257.5px;*/
     margin-bottom: 20px;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-radius: 4px;
     position: relative;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 
 .room__left, .room__right {
@@ -1184,13 +1195,15 @@ button {
 }
 
 .room__data {
-    padding: 170px 16px 3px 21px;
+    padding: 0px 16px 19px 21px;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .room__data--number {
+    width: calc(100% / 2);
     font-family: 'Quicksand', sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -1200,7 +1213,8 @@ button {
 }
 
 .room__data--cash {
-    width: 131px;
+    width: calc(100% / 2);
+    text-align: right;
 }
 
 .room__data--content {
@@ -1210,15 +1224,19 @@ button {
     border: none;
     border-radius: 5px;
     height: 1px;
+    margin-top: 7px;
+    margin-bottom: 7px;
 }
 
 .room__number {
+    cursor: inherit;
     font-family: 'Quicksand', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 19px;
     line-height: 24px;
     margin-left: 4px;
+    color: #000;
 }
 
 .room__number--big {
@@ -1252,7 +1270,6 @@ button {
     font-size: 14px;
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
-    margin-left: 30px;
 }
 
 .room__day {

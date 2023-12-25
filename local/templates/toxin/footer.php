@@ -1,7 +1,7 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
 <footer class="footer">
-    <div class="container">
+    <div class="container_main">
         <div class="footer__col">
             <div class="col1">
                 <a href="index.html"><img src="<?= SITE_TEMPLATE_PATH ?>/img/icons/logo.svg" alt=""></a>

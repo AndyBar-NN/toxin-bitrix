@@ -33,7 +33,7 @@
 <body>
 <div id="panel"><?=$APPLICATION->ShowPanel();?></div>
 <header class="header">
-    <div class="container">
+    <div class="container_main">
         <div class="menu">
             <a href="/" id="logo" class="menu__logo"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/logo.svg" alt=""></a>
             <div class="nav">

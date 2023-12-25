@@ -2,7 +2,7 @@
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Комнаты");
 ?>
-    <div class="container">
+    <div class="container_main">
         <? $APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
 	"rooms", 
@@ -92,7 +92,7 @@ $APPLICATION->SetTitle("Комнаты");
 		"SEARCH_CHECK_DATES" => "Y",
 		"SEARCH_USE_SEARCH_RESULT_ORDER" => "N",
 		"SHOW_TOP_ELEMENTS" => "Y",
-		"TOP_ELEMENT_COUNT" => "12",
+		"TOP_ELEMENT_COUNT" => "0",
 		"TOP_LINE_ELEMENT_COUNT" => "3",
 		"TOP_ELEMENT_SORT_FIELD" => "sort",
 		"TOP_ELEMENT_SORT_ORDER" => "asc",
@@ -100,7 +100,7 @@ $APPLICATION->SetTitle("Комнаты");
 		"TOP_ELEMENT_SORT_ORDER2" => "desc",
 		"TOP_VIEW_MODE" => "SECTION",
 		"TOP_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
-		"TOP_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
+		"TOP_PRODUCT_ROW_VARIANTS" => "[]",
 		"TOP_ENLARGE_PRODUCT" => "STRICT",
 		"TOP_SHOW_SLIDER" => "Y",
 		"TOP_SLIDER_INTERVAL" => "3000",
@@ -109,7 +109,7 @@ $APPLICATION->SetTitle("Комнаты");
 		"SECTION_TOP_DEPTH" => "2",
 		"SECTIONS_VIEW_MODE" => "LIST",
 		"SECTIONS_SHOW_PARENT_NAME" => "Y",
-		"PAGE_ELEMENT_COUNT" => "30",
+		"PAGE_ELEMENT_COUNT" => "12",
 		"LINE_ELEMENT_COUNT" => "3",
 		"ELEMENT_SORT_FIELD" => "sort",
 		"ELEMENT_SORT_ORDER" => "asc",
@@ -121,7 +121,7 @@ $APPLICATION->SetTitle("Комнаты");
 		"LIST_BROWSER_TITLE" => "-",
 		"SECTION_BACKGROUND_IMAGE" => "-",
 		"LIST_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
-		"LIST_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
+		"LIST_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
 		"LIST_ENLARGE_PRODUCT" => "STRICT",
 		"LIST_SHOW_SLIDER" => "Y",
 		"LIST_SLIDER_INTERVAL" => "3000",
@@ -153,7 +153,7 @@ $APPLICATION->SetTitle("Комнаты");
 		"MESS_DESCRIPTION_TAB" => "Описание",
 		"MESS_PROPERTIES_TAB" => "Характеристики",
 		"MESS_COMMENTS_TAB" => "Комментарии",
-		"DETAIL_SHOW_POPULAR" => "Y",
+		"DETAIL_SHOW_POPULAR" => "N",
 		"DETAIL_SHOW_VIEWED" => "Y",
 		"LINK_IBLOCK_TYPE" => "",
 		"LINK_IBLOCK_ID" => "",
